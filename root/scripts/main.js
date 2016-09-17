@@ -5,7 +5,7 @@ import { setPositon, getCoordinates } from './common.js';
 var MainApp = React.createClass({
 
   getInitialState: function() {
-   return {source : "", destination:"", time:"", email:"", totalTime:'', totalKm:'', arrivalTime:'', carType:'', sourceLat:'', sourceLang:'', showDetails:false, loaderText:'Enter the above details to get remainder',alertClass:'alert alert-success', customMessage:'' };
+   return {source : "", destination:"", time:"", email:"", totalTime:'', totalKm:'', arrivalTime:'', carType:'', sourceLat:'', sourceLang:'', showDetails:false, loaderText:'Enter the above details to set reminder',alertClass:'alert alert-success', customMessage:'' };
  },
 
   sendToFirebase: function(){
@@ -103,7 +103,7 @@ this.findDistance();
 
 
   handleChange: function(field, e) {
-    this.setState({showDetails: false, loaderText:'Enter the above details to get remainder'});
+    this.setState({showDetails: false, loaderText:'Enter the above details to get reminder'});
     if(field==="source"){
       this.setState({source: e.target.value});
     }else if(field==="dest"){
@@ -183,7 +183,7 @@ this.findDistance();
             <div className="form-group">
               <div className="col-sm-offset-2 col-sm-10">
                 <button type="button" className="btn btn-primary" onClick={this.bookReminder}>
-                  Set Remainder
+                  Set Reminder
                 </button>
               </div>
             </div>
