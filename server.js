@@ -53,8 +53,8 @@ function sendEmail(email, message) {
   var transporter = nodemailer.createTransport({
       service: 'Gmail',
       auth: {
-          user: 'taxibookingreminder@gmail.com',
-          pass: 'hbwkvzdudaxruxhc'
+          user: 'email',
+          pass: 'pass'
       }
   });
   var mailOptions = {
